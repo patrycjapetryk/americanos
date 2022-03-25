@@ -6,23 +6,19 @@ head
   include ../partials/header.pug
 
   include ../partials/paragraph-1.pug
+  include ../partials/gallery-horizontal-1.pug 
   include ../partials/gallery-fullscreen-1.pug
-  include ../partials/gallery-two-columns-1.pug
-  include ../partials/gallery-1.pug
-
   include ../partials/paragraph-2.pug
+  include ../partials/gallery-two-columns-1.pug
+  
+  include ../partials/gallery-horizontal-2.pug
   include ../partials/gallery-two-columns-2.pug
-
-  include ../partials/paragraph-3.pug
-  include ../partials/gallery-2.pug
-
-  include ../partials/paragraph-4.pug
-  include ../partials/gallery-fullscreen-1.pug
-  include ../partials/packshots-1.pug
-
-  include ../partials/paragraph-5.pug
-  include ../partials/gallery-horizontal-1.pug
-  include ../partials/button.pug
+  include ../partials/gallery-horizontal-3.pug
+  include ../partials/gallery-three-columns-1.pug
+  include ../partials/gallery-two-columns-3.pug
+  include ../partials/gallery-three-columns-2.pug
+  
+ 
 
 
 script.
@@ -95,27 +91,27 @@ script(src='https://player.vimeo.com/api/player.js')
 script.
   // waitForElement('.c-header', function () {
   (function () {
-  var mainVideo = document.querySelector('.main-video--js');
-  var player = new Vimeo.Player(mainVideo);
-  var audioBtn = document.querySelector('.header__audio-btn');
-  var audioIconOff = document.querySelector(
-  '.header__audio-btn-icon-off',
-  );
-  var audioIconOn = document.querySelector('.header__audio-btn-icon-on');
-  player.setVolume(0);
-  audioBtn.addEventListener('click', function () {
-  player.getVolume().then(function (volume) {
-  if (volume !== 0) {
-  player.setVolume(0);
-  audioIconOn.style.opacity = '0';
-  audioIconOff.style.opacity = '1';
-  } else {
-  player.setVolume(1);
-  audioIconOn.style.opacity = '1';
-  audioIconOff.style.opacity = '0';
-  }
-  });
-  });
+  //- var mainVideo = document.querySelector('.main-video--js');
+  //- var player = new Vimeo.Player(mainVideo);
+  //- var audioBtn = document.querySelector('.header__audio-btn');
+  //- var audioIconOff = document.querySelector(
+  //- '.header__audio-btn-icon-off',
+  //- );
+  //- var audioIconOn = document.querySelector('.header__audio-btn-icon-on');
+  //- player.setVolume(0);
+  //- audioBtn.addEventListener('click', function () {
+  //- player.getVolume().then(function (volume) {
+  //- if (volume !== 0) {
+  //- player.setVolume(0);
+  //- audioIconOn.style.opacity = '0';
+  //- audioIconOff.style.opacity = '1';
+  //- } else {
+  //- player.setVolume(1);
+  //- audioIconOn.style.opacity = '1';
+  //- audioIconOff.style.opacity = '0';
+  //- }
+  //- });
+  //- });
   var scrollbarWidth = window.innerWidth - document.body.clientWidth;
   if (navigator.appVersion.indexOf('Win') != -1) {
   document.body.style.setProperty(

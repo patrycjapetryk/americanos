@@ -11,6 +11,11 @@
   &__wrapper {
     width: 100%;
     position: relative;
+    padding: 10px;
+
+    @media (max-width: $breakpoint-mobile-width) {
+      padding: 0;
+    }
   }
 
   &__image {
