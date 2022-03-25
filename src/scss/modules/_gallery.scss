@@ -20,6 +20,14 @@
     width: var(--viewportWidth);
   }
 
+  &--narrower {
+    max-width: 1020px;
+  }
+
+  &--narrowest {
+    max-width: 900px;
+  }
+
   &--center {
     justify-content: center;
   }
@@ -62,7 +70,7 @@
 
     &--s {
       // two items
-      width: 42%;
+      width: 44%;
 
       @media (max-width: $breakpoint-tablet-width) {
         width: 50%;
@@ -73,14 +81,23 @@
       }
     }
 
+    &--ss {
+      // three large items
+      width: 33%;
+      @media (max-width: $breakpoint-tablet-width) {
+        width: 100%;
+        margin-bottom: 5px;
+      }
+    }
+
     &--xs {
-      // four items
-      width: 24%;
+      // three items
+      width: 27%;
 
       @media (max-width: $breakpoint-tablet-width) {
-        width: 50%;
+        width: 70%;
 
-        &:first-child {
+        &:nth-child(-n + 2) {
           margin-bottom: $gap-mobile;
         }
 
